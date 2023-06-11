@@ -4,24 +4,36 @@ This project is a simple web scraper built with Python. It uses the BeautifulSou
 
 ## Project Description
 
-This project was created as part of my journey to learn Python and web scraping. The goal of the project was to scrape data from the '' website, specifically the.
+The goal of this project is to extract data about laptops from the 'Web Scraper' website. We will send a GET request to the website's URL using the requests library and retrieve the HTML content of the webpage. Then, using BeautifulSoup with the "lxml" parser, we will parse the HTML and extract the desired information.
 
 ## Technologies Used
 
 - Python
 - BeautifulSoup
 - requests
-- CSV
 
 ## How to Run the Project
 
 1. Ensure that you have Python installed on your machine.
-2. Install the required Python libraries with the command `pip install -r requirements.txt`.
-3. Run the script with the command `.py`.
+2. Install the required Python libraries with the command 
+`pip install -r requirements.txt` or `pip install requests beautifulsoup4`.
+4. Run the script with the command `python textScraper.py`.
+5. The script will send a GET request to the target URL, scrape the webpage, and print the extracted information about the laptops.
+
+## Sample Output
+
+After running the script, the program will print following info about laptops in the console:
+
+1. Number of div elements with class "col-sm-4 col-lg-4 col-md4" found on the webpage.
+2. Names of Laptops extracted from the "a" tags with "title" class.
+3. Prices of laptops extracted from the "h4" tags with the class "pull-right price"
 
 ## Future Improvements
 
-In the future, I plan to add the following features to the project:
+In the future the project can be further enhanced in following ways:
+1. Storing scraped data in a file or a database for further analysis and / or usage of data.
+2. Implement additional data extraction techniques to capture more information about from the webpage.
+3. Adding error handling and robustness to handle various scenarios and edge cases.
 
 ## Acknowledgements
 
