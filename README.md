@@ -1,40 +1,27 @@
-# Python Web Scraping Project
+# Web Scraping Projects
 
-This project is a simple web scraper built with Python. It uses the BeautifulSoup and requests libraries to scrape book information from the 'Books to Scrape' website and stores the data in a CSV file.
+This repository contains multiple small web scraping projects using different techniques. Each project focuses on scraping data from specific websites or sources using various tools and libraries.
 
-## Project Description
+## Project List
 
-The goal of this project is to extract data about laptops from the 'Web Scraper' website. We will send a GET request to the website's URL using the requests library and retrieve the HTML content of the webpage. Then, using BeautifulSoup with the "lxml" parser, we will parse the HTML and extract the desired information.
+1. **Project 1: [E-commerce website, text data-scraping](project1/)
 
-## Technologies Used
+## Project Structure
 
-- Python
-- BeautifulSoup
-- requests
+Each project follows a similar structure, consisting of the following files and directories:
 
-## How to Run the Project
+- `main.py` - The main script containing the web scraping logic.
+- `requirements.txt` - A list of required Python libraries and dependencies.
+- `README.md` - Project-specific documentation, including instructions and additional details.
 
-1. Ensure that you have Python installed on your machine.
-2. Install the required Python libraries with the command 
-`pip install -r requirements.txt` or `pip install requests beautifulsoup4`.
-4. Run the script with the command `python textScraper.py`.
-5. The script will send a GET request to the target URL, scrape the webpage, and print the extracted information about the laptops.
+## Getting Started
 
-## Sample Output
+To get started with any of the projects, follow the instructions provided in each project's directory.
 
-After running the script, the program will print following info about laptops in the console:
+## Contributing
 
-1. Number of div elements with class "col-sm-4 col-lg-4 col-md4" found on the webpage.
-2. Names of Laptops extracted from the "a" tags with "title" class.
-3. Prices of laptops extracted from the "h4" tags with the class "pull-right price"
+Contributions to these projects are welcome! If you have suggestions, bug fixes, or would like to add new features, please open an issue or submit a pull request.
 
-## Future Improvements
+## License
 
-In the future the project can be further enhanced in following ways:
-1. Storing scraped data in a file or a database for further analysis and / or usage of data.
-2. Implement additional data extraction techniques to capture more information about from the webpage.
-3. Adding error handling and robustness to handle various scenarios and edge cases.
-
-## Acknowledgements
-
-This project was inspired by the tutorial ["Python Web Scraping | What to study, Salary & Packages, Application | Simply Explained"](https://www.youtube.com/watch?v=2UTa6eTDdWc&list=PLjVLYmrlmjGfSYkgH-_jgC8KMxyRzq7US).
+These projects are licensed under the [MIT License](LICENSE).
