@@ -1,10 +1,10 @@
 # Web Scraping Projects
 
-This repository contains multiple small web scraping projects using different techniques. Each project focuses on scraping data from specific websites or sources using various tools and libraries.
+This repository contains multiple small web scraping projects using python. Each project focuses on scraping data from specific websites or sources using various tools and libraries.
 
 ## Project List
 
-1. **Project 1: [E-commerce website, text data-scraping](project1/)
+1. **Project 1: [E-commerce website, text data-scraping](project1/)**
 
 ## Project Structure
 
