@@ -1,6 +1,6 @@
 # Python Web Scraping Project
 
-This project is a simple web scraper built with Python. It uses the BeautifulSoup and requests libraries to scrape book information from the 'Books to Scrape' website and stores the data in a CSV file.
+This project is a simple web scraper built with Python. It uses the BeautifulSoup and requests libraries to scrape book information from the 'Web Scraper' website.
 
 ## Project Description
 
