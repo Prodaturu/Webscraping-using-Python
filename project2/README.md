@@ -16,8 +16,7 @@ The goal of this project is to extract data about IPL auction from the 'IPL T20'
 ## How to Run the Project
 
 1. Ensure that you have Python installed on your machine.
-2. Install the required Python libraries with the command 
-`pip install -r requirements.txt` or `pip install requests beautifulsoup4 pandas`.
+2. Install the required Python libraries with the command `pip install -r requirements.txt` or `pip install requests beautifulsoup4 pandas lxml`.
 3. Run the script with the command `python main.py`.
 4. The script will send a GET request to the target URL, scrape the webpage, and print the extracted information about the IPL auction. It will also save the data in a CSV file named "IPL Auction stats.csv".
 

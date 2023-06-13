@@ -15,8 +15,7 @@ The goal of this project is to extract data about laptops from the 'Web Scraper'
 ## How to Run the Project
 
 1. Ensure that you have Python installed on your machine.
-2. Install the required Python libraries with the command 
-`pip install -r requirements.txt` or `pip install requests beautifulsoup4`.
+2. Install the required Python libraries with the command `pip install -r requirements.txt` or `pip install requests beautifulsoup4 lxml`.
 3. Run the script with the command `python main.py`.
 4. The script will send a GET request to the target URL, scrape the webpage, and print the extracted information about the laptops.
 
