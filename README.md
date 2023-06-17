@@ -21,7 +21,3 @@ To get started with any of the projects, follow the instructions provided in eac
 ## Contributing
 
 Contributions to these projects are welcome! If you have suggestions, bug fixes, or would like to add new features, please open an issue or submit a pull request.
-
-## License
-
-These projects are licensed under the [MIT License](LICENSE).
