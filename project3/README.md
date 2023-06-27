@@ -33,7 +33,7 @@ The script iterates over multiple pages of search results, extracting data from 
 After running the script, the program will print the following info about mobile phones in the console:
 
 1. Product Name: Extracted from the "div" tags with the class "_4rR01T".
-2. Prices: Extracted from the "div" tags with the class "_30jeq3 _1_WHN1".
+2. Prices: Extracted from the "div" tags with the classes "_30jeq3" and "_1_WHN1" combined.
 3. Description: Extracted from the "ul" tags with the class "_1xgFaf".
 
 This information will also be saved to a CSV file.
