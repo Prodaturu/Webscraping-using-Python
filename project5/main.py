@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 import time
 from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
+from collections import defaultdict
 
 #: Set up ChromeDriver and launch a new Chrome browser instance.
 s = Service("./chromedriver_win32/chromedriver.exe")    #, Boiler-plate code
@@ -35,26 +36,37 @@ soup = BeautifulSoup(html, "html.parser")   #, Boiler-plate code
 
 #: Find  all price's on the page:
 prices = soup.find_all("span", class_="price")
-pricesList = [price.text.replace("₹","").replace(",","").strip() for price in prices]
+pricesList = [int(price.text.replace("₹","").replace(",","").strip()) for price in prices]
 
 #: Find all product's on the page:
-brandNames = soup.find_all("div", class_="nameCls")
+brandNames = soup.find_all("div", class_="brand")
 brandNames_List = [brandName.text for brandName in brandNames]
 
-#. Comparing Product names and prices on a graph using matplotlib:
+#. Calculate average price per brand:
 
-print("Product names length: ", len(brandNames_List), "\nPrices length: ", len(pricesList))
-time.sleep(3)
+#: Initialize a dictionary to store the total price and count for each brand
+brand_data = defaultdict(lambda: [0, 0]) # default value is a list [0, 0]
 
-pricesList = [int(price.replace(",",""))
-for price in pricesList]   #, converting to integers for plotting
-plt.figure(figsize=(10,8))
-plt.bar(brandNames, pricesList)
+for brand, price in zip(brandNames_List, pricesList):
+    brand_data[brand][0] += price # add price to total
+    brand_data[brand][1] += 1 # increment count
+
+#: Calculate average price for each brand
+avg_prices = {brand: total/count for brand, (total, count) in brand_data.items()}
+
+#. Comparing Brand names and average prices on a graph using matplotlib:
+
+brands = list(avg_prices.keys())
+avg_prices = list(avg_prices.values())
+
+#: plotting the graph of brands (x) vs avg_prices (y):
+plt.figure(figsize=(15,8))
+plt.bar(brands, avg_prices)
 
 #: Add labels and title:
-plt.xlabel('Product Names')
-plt.ylabel('Prices')
-plt.title('Products and Prices')
+plt.xlabel('Brand Names', fontsize = 10)
+plt.ylabel('Average Prices', fontsize = 12)
+plt.title('Average Price per Brand')
 plt.xticks(rotation=90) #, Rotating x-axis labels
 
 plt.show()
